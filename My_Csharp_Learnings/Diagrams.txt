@@ -1,0 +1,1701 @@
+Diagrams
+
+		o
+
+		o    o
+
+		-----
+
+		---->
+		
+		<----
+
+		<--->
+
+		o-----o
+
+		o---->o
+
+		o<----o
+
+		o<--->o
+
+		+---+
+
+		|
+
+		+---+
+		|   |
+		+---+
+
+		+-----+
+		|     |
+		+-----+
+
+		+-------+
+		|       |
+		+-------+
+
+		+---+---+
+		|   |   |
+		+---+---+
+
+		+---+---+---+
+		|   |   |   |
+		+---+---+---+
+
+		+------------+
+		|            |
+		+------------+
+		|            |
+		+------------+
+
+		+------------+
+		|            |
+		+------------+
+		|            |
+		+------------+
+		|            |
+		+------------+
+
+	   |
+	  ---
+	   -
+
+            o---o---o
+
+		o--->o--->o
+
+		+-----+---+
+		|     |   |
+		+-----+---+
+
+		+---------+
+        |         |
+		|  +---+  |
+		|  |   |  |
+		|  +---+  |
+		|	      |
+		+---------+
+
+		o
+		|-
+		/\
+
+		     o
+    	    -|
+            /\
+
+            o node
+
+		----- edge
+
+		----- undirected edge
+
+		----> arrow
+
+		----> directed edge
+
+		o named node
+		A 
+
+		o
+		A  <--- name
+
+		o
+		A  <--- label
+
+		o  labelled node
+		A  
+
+		o
+		A  <--- tag
+
+		o tagged node
+		A  
+
+		 e
+       ------  named edge
+			   labelled edge
+			   tagged edge
+				
+		o-----o
+		A	  B
+
+		o---->o
+		A	  B
+
+		o<----o
+		A	  B
+
+		o<--->o
+		A	 B
+
+		o		    	o
+		|- ----------> -|
+		/\		   	   /\
+		A		   		B
+
+		o		         o
+		|- -----------> -|
+		/\ <----------- /\
+		A		         B
+
+		o		    	+---+
+		|- --------->   |   |
+		/\		    	+---+
+		A
+
+		o		    	+---+
+		|- --------->   |   |
+		/\		    	+---+
+		A			
+
+    o             +---+    +---+             o
+    |- ---------- |   |    |   | ---------- -|
+    /\            +---+    +---+            /\
+    A                                       B
+
+ 
+
+
+    o             +---+    +---+             o
+    |- ---------- |   |    |   | ---------- -|
+    /\            +---+    +---+            /\
+    A                                       B
+ 
+
+
+    o              +---+    +---+              o
+    |- ----------- | 1 |    | 2 | ----------- -|
+    /\             +---+    +---+             /\
+    A                                         B
+
+
+                   +---------+
+                   |         |
+                   |         v
+    o          	   +---+    +---+              o
+    |- ----------- | 1 |    | 1 | ----------- -|
+    /\             +---+    +---+             /\
+    A                                         B
+
+----------------------------------------------------------------------
+
+
+Relationship Diagrams
+
+A is connected to B.
+
+		is connected to
+	o----------------------------->o
+	A					 B
+
+A is linked to B.
+
+		is linked to
+	o----------------------------->o
+	A					 B
+
+A is related to B.
+
+		is related to
+	o----------------------------->o
+	A					 B
+
+A is associated B.
+
+		is associated to
+	o----------------------------->o
+	A					 B
+
+
+A is of type B.
+
+		is of type 
+	o----------------------------->o
+	A					 B
+
+A is of kind B.
+
+		is of kind 
+	o----------------------------->o
+	A					 B
+
+A is a B.
+
+	   is a
+	o------------->o
+	A		   B
+
+A uses B.
+
+	    uses
+	o------------->o
+	A		   B
+
+A depends on B.
+
+	  depends on
+	o------------->o
+	A		   B
+
+A is coupled to B.
+
+	  is coupled to
+	o------------->o
+	A		   B
+
+A calls B.
+
+	    calls
+	o------------->o
+	A		   B
+
+A calls B.
+
+	    calls
+	o------------->o
+	A		   B
+	    calls
+	o------------->o
+	A		   B
+   caller         callee
+
+caller calls callee.
+
+A invokes B.
+
+	    invokes
+	o------------->o
+	A		   B
+	    invokes
+	o------------->o
+	A		   B
+   invoker         invoker
+
+invoker invokes invokee.
+
+A refers to B.
+
+	    refers to
+	o-------------->o
+	A		    B
+
+	    refers to
+	o-------------->o
+	A		    B
+
+   reference	referent
+
+reference refers to referent.
+
+A points to B.
+
+	    points to
+	o-------------->o
+	A		    B
+
+	    points to
+	o-------------->o
+	A		    B
+  pointer        pointed to object/thing/entity
+
+A is a friend of B.
+
+	    is a friend of
+	o------------------>o
+	A		        B
+
+A is a friend of A.
+
+	    is a friend of
+	o------------------>o
+	A		        A
+
+
+	+------+
+	|      | is a friend of
+	|      |
+	o<-----+
+	A
+
+A refers to A.
+
+	    refers to
+	o------------------>o
+	A		        A
+
+
+	+------+
+	|      | refers to
+	|      |
+	o<-----+
+	A
+	self-referential
+
+A points to A.
+
+	    points to
+	o------------------>o
+	A		        A
+
+
+	+------+
+	|      | points to
+	|      |
+	o<-----+
+	A
+
+A contains B.
+
+	    contains
+	o------------------>o
+	A		        B
+
+	A
+    +---------+
+    |  B      |
+    |  +---+  |
+    |  |   |  |
+    |  +---+  |
+    |         |
+    +---------+
+
+
+   A|  B      |
+    |  +---+  |
+    |  |   |  |
+    |  +---+  |
+    +---------+
+
+
+A has a B.
+
+		has a
+	0---------->o
+	A	      B
+
+A consists of B.
+
+		consists of
+	0---------------->o
+	A			B
+
+A comprises of B.
+
+	   comprises of
+	0---------------->o
+	A			B
+
+A is made up of B.
+
+	   is made up of
+	0---------------->o
+	A			B
+
+A has a ball.
+
+	    has a
+	0------------>o
+  A bag		  ball
+
+	    has a
+	0------------>o
+  A bag		 a ball
+
+
+ Bag|  Ball   |
+    |  +---+  |
+    |  |   |  |
+    |  +---+  |
+    +---------+
+
+
+A aggregates B.
+
+		aggregates
+	0--------------->o
+	A		     B
+
+		aggregates
+	0--------------->o
+	A		     B
+  aggregate        aggregatee
+
+aggregate aggregates aggregatee.
+
+A is above B.
+
+	   is above
+	0------------>o
+	A	        B
+
+B is below A.
+
+	   is below
+	0------------>o
+	B	        A
+
+	   is below
+	0<------------o
+	A		  B
+
+
+		 implies
+A is above B ----------> B is Below A.
+	
+	    is above
+	o------------->o
+	A<-------------B
+		is below
+
+
+	    is above
+	      	 \
+	O ------------  O
+	A ------------  B
+	  \	
+		is below
+
+A sends message to  B.
+
+	   sends message to
+	0------------------->o
+	A			   B
+
+	*message
+	       sends to
+	0------------------->o
+	A	               B
+
+
+      *message
+
+	o	 sends to      	 o
+	|- ---------------> -|
+	/\		        	/\
+	A		       		 B
+ senders			receiver
+
+senders sends message to receiver.
+
+
+		*message
+
+	o	 sends to        o
+	|- ---------------> -|
+	/\			  		/\
+	A			         B
+ senders			recipient
+
+senders sends message to recipient.
+
+
+	*request message
+
+	o	 sends to        o
+	|- ---------------> -|
+	/\			  		/\
+	A			  		B
+ client		       		server
+
+Client sends request message to server.
+
+	*request message
+
+	o	 sends to        o
+	|- ---------------> -|
+	/\			  		/\
+	A	                B
+ client    		    server
+ sender               receiver
+
+
+					*response message
+	o	 sends to        o
+	|- <--------------- -|
+	/\		        	/\
+	A		        	B
+ client			 	server
+ 
+ 
+ ---------------------------------------------------------------
+ 
+ 
+ 
+ 
+ 	o
+	|- 
+	/\	
+	A	
+ Command processor	
+ 
+ 
+ 	o	 sends to        o
+	|- ---------------> -|
+	/\			  		/\
+	A			  		B
+ End-user			Command processor
+ 
+ 
+  	o	 command         o
+	|- ---------------> -|
+	/\			  		/\
+	A			  		B
+ End-user			Command processor
+ 
+   	o	 add 1 2       	o
+	|- ---------------> -|
+	/\			  		/\
+	A			    	B
+ End-user			Command processor
+ 
+    <--- command --->
+   add	1	2
+   
+    <---------------------------------- command --->
+		add
+		
+    <--- command name ---> <-- command argument --->
+						   <-- command parameter -->
+						  
+    <------------------------- command line ------->
+    <--- command name ---> <-- command argument --->
+				           <-- command parameter -->
+						  
+------------------------------------------------------------------------------------
+Before State
+
+		Empty/ Nothing
+		
+Action(Command)
+	
+	create-node A
+	
+	o	 create-node A        o
+	|- --------------------> -|
+	/\			       		 /\
+	A			      	 	 B
+ End-user				Command processor
+ 
+After State
+	
+	O
+	A
+	
+----------------------------------------------------------
+
+Before State
+
+	O
+	A
+
+Action
+	create-node B
+
+After State
+
+	O		O
+	A		B
+	
+------------------------------------------------
+
+Before State
+
+	O		O
+	A		B
+
+Action
+	create-edge A B
+	
+After State
+	O-----------O
+	A		B
+-------------------------------------------------------	
+	
+Before State
+
+	O		O
+	A		B
+	
+Action 
+	delete-node B
+	destroy-node B
+	remove-node B
+
+After State
+	O
+	A
+--------------------------------------------
+Before State
+	O-----------O
+	A			B
+	
+Action
+	delete-node  B
+
+After State
+	Possibility#1:    Possibility#2:		     Possibility#3:
+	
+	O-------			O						 Empty
+	A					A
+	
+ Dangling Edge		Node B deleted		     	 Node B deleted(neighbour also deleted) 
+ Node B deleted		Edge also deleted	         Edge also deleted
+ Edge remained						     		 Node A also deleted
+   
+------------------------------------------------------
+Before State
+	
+	O		O
+	A		B
+	
+Action 
+	create-directed-edge  A  B
+	cde A B
+	
+After State
+
+	O----------->O
+	A		 B
+
+---------------------------------------------------------
+
+Before State
+
+	O-------->O------->O
+	A	    B		 C
+	
+Action
+	delete-node B
+
+After State
+
+	Possibility#1:     Possibility#2:		Possibility#3:
+	O---> ---->C
+	
+	Node B is removed	 Node B removed		Node B removed
+	Edge kept		  	 Edge also removed	edge also removed
+							                Connected node aslo removed
+											
+											
+											
+	Possibility#4:
+	o------->o
+	A		 B
+	node B removed
+	Original edges - merged
+	So edge created from A to C
+	
+------------------------------------------------------------
+
+Before State
+
+	O
+	A
+
+Action
+	copy-node A  A'
+	clone-node A  A'
+ 
+After State
+
+	O
+	A
+	
+	O
+	A'
+	
+------------------------------------------------------------
+Before State
+
+	O------->O
+	A		 B
+Action
+	copy-node B  B'
+	clone-node B  B'
+
+After State
+
+     Possibility #1:        Possibility #2:       Possibility #3:
+
+         e1                                           e1
+     o-------->o            o---+      o          o--------->o
+     A         B            A   |      B          A          |
+                                | e1                         v
+               o                +----->o                     o
+               B'                      B'                    B'
+
+ 
+
+     B' created             B' created            B' created       
+
+     Original               Original              Original Edge remains
+     Edge remains           Edge gets             New edge gets created
+     as it is.              transferred/moved     automatically between
+                            to B'                 B and B'
+
+     Possibility #4:        Possibility #5:
+
+                               e1
+     o      o               o------->o
+     A      B               A---+
+                                | e2
+            o                   +--->o
+            B'                       B'
+
+     B' created             B' created
+
+     Original edge          Original edge remains
+     removed.               New edge created
+                            between A and B.
+
+---------------------------------------------------------
+		e
+	O-------------->O
+	A		    B
+  Source           Target
+  node		 node
+ 
+A is source node for edge e.
+B is target node for edge e.
+-------------------------------------------------------
+		e
+	O-------------->O
+	A		    B
+  Source          Destination
+  node		node
+ 
+A is source node for edge e.
+B is Destination node for edge e.
+
+-------------------------------------------------------
+		e
+	O-------------->O
+	A		    B
+  Source            Sink
+  node		  node
+ 
+A is source node for edge e.
+B is Sink node for edge e.
+
+-------------------------------------------------------
+	
+	O 
+	
+	O
+	
+	O
+	|
+	+--O
+	
+	O
+	|
+	+--O
+	|
+	+--O
+	
+	O
+	|
+	+--O
+	|
+	+--O
+	|
+	+--O
+
+	O
+	|
+	+--O
+	|  |
+	|  +--O
+    |
+	+--O
+-----------------------------------------------------------
+
+	O  A
+	
+	O  A
+	|
+	+--O  B
+	
+	O  A
+	|
+	+--O B
+	|
+	+--O C
+	
+	O  A
+	|
+	+--O  B
+	|
+	+--O  C
+	|
+	+--O  D
+
+	O  A
+	|
+	+--O  B
+	|  |
+	|  +--O  C
+    |
+	+--O  D
+-------------------------------------------------------
+
+Tree Structure
+
+	O  A			^
+	|				|
+	+--O  B			|
+	|  |			|
+	|  +--O  C		| Tree Structure
+    |				|
+	+--O  D			v
+	
+-------------------------------------------------------
+
+Hierarchial Structure
+
+	O  A			^
+	|				|
+	+--O  B			|
+	|  |			|
+	|  +--O  C		| Hierarchial Structure
+    |				|
+	+--O  D			v
+------------------------------------------------------------
+
+Tree Structure
+
+	O  A		<--root node		
+	|				
+	+--O  B							
+	|  |				
+	|  +--O  C	<--leaf node		
+    |					
+	+--O  D	    <--leaf node			
+
+Nodes which are not leaf nodes are inner nodes.
+----------------------------------------------------
+
+	O  A     <-- Parent Node
+	|
+	+--O  B  <--Child Node
+	
+------------------------------------------------
+
+		+---+
+		|   |
+		+---+
+		
+		Box
+		+---+
+		|   |
+		+---+
+
+		Box
+		+----+
+		| 10 <-- Value
+		+----+	
+		
+		Box
+		+----+
+		| 10 <-- Value
+		+----+	
+			1 <--- Address
+			
+			
+Name	      Box
+		    +----+
+A------>    | 10 <-- Value
+		    +----+	
+			  1 <--- Address	
+
+---------------------------------------------------------------
+
+Name	              Box
+	binding	        +----+
+A-------------->    | 10 <-- Value
+		            +----+	
+			          1 <--- Address	
+				  
+				  
+Giving a name to the box is called binding.
+Associating a name to the box is called binding.	
+
+---------------------------------------------------------------
+
+Name	         Memory Location
+	binding	        +----+
+A-------------->    | 10 <-- Value
+		            +----+	
+			           1 <--- Address	
+				  
+				  
+Giving a Memory Location to the box is called binding.
+Associating a name to the Memory Location is called binding.
+
+---------------------------------------------------------------
+						NEXT DAY
+---------------------------------------------------------------
+
+					Learn Data Structure and Algorithms
+
+Code
+
+void f(){
+
+}
+Code with line number
+======++=============++===========++========++=============++==============++==========++=====
+Code 01:
+
+01 void f()
+02 {
+03 }
+
+Code visualization
+
+01 void f()
+02 {
+03 }
+
+     O
+     |-
+     /\
+     f
+======++=============++===========++========++=============++==============++==========
+Code 02:
+
+01.
+02. int main()
+03. {
+04.  int i=0;
+05. 
+06.  return 0;
+07. }
+
+
+Code visualization
+
+Ater line 02
+
+     O
+     |-
+     /\
+     main
+	 
+After line 04
+
+		 Data       Name          memory
+		 type	   Identifier	 location
+     O	  int       i	       	  +---+
+     |----------------------------| 0 |
+     /\						      +---+
+     main	int*	&i				100 <---Memory address
+				   Expression
+				   
+======++=============++===========++========++=============++==============++==========++=====
+Code 03:
+
+01.
+02. int main()
+03. {
+04.  int i=0;
+05.  int j=10;
+06.
+07.  return 0;
+08. }
+
+
+Code visualization
+
+Ater line 02
+
+     O
+     |-
+     /\
+     main
+	 
+	After line 04
+
+			Data       Name          memory
+			type	   Identifier	 location
+		 O	  int       i	       	  +---+
+		 |----------------------------| 0 |
+		 /\						      +---+
+		 main	int*	&i				100 <---Memory address
+					   Expression
+
+	After line 05
+
+			  Data       Name          memory
+			  type	   Identifier	 location
+		 O	  int       i	       	  +---+
+		 |----------------------------| 0 |
+		 /\---+						  +---+
+		 main | int*	&i				100 <---Memory address
+			  |		   Expression
+	          |
+	          |
+		 	  |  int      j	       	  +----+
+		      +-----------------------| 10 |
+		 						      +----+
+		 	    int*	&j				96 <---Memory address
+		
+
+				   
+==============++=============++===========++========++=============++==============++==========+
+Code 04:
+
+01.
+02. int main()
+03. {
+04.  int i=0;
+05.  int *pi=&i;
+06.
+07.  return 0;
+08. }
+
+
+Code visualization
+
+Ater line 02
+
+     O
+     |-
+     /\
+     main
+	 
+	After line 04
+
+			Data       Name          memory
+			type	   Identifier	 location
+		 O	  int       i	       	  +---+
+		 |----------------------------| 0 |
+		 /\						      +---+
+		 main	int*	&i				100 <---Memory address
+					   Expression
+
+	After line 05
+
+			  Data       Name          memory
+			  type	   Identifier	 location
+		 O	  int       i	       	  +---+
+		 |----------------------------| 0 |
+		 /\---+						  +---+
+		 main | int*	&i			   100 <---Memory address
+			  |		   Expression		|
+	          |							|
+	          |							|
+		 	  | int*    pi	       	  +-V---+
+		      +-----------------------| 100 |
+		 						      +-----+
+		 	    int**	&pi				96 <---Memory address
+		
+
+===========++=============++===========++========++=============++==============++==========
+Code 05:
+
+A01.								B01.
+A02. int main()						B02. void f()
+A03. {								B03. {
+A04. 	f();						B04. }
+A05. 	return 0;
+A06. }
+
+At line A04/B02
+
+     O		call						 O
+     |-	------------------------------>	-|
+     /\									/\
+    main								f
+	caller								callee
+	
+=========++=============++===========++========++=============++==============++==========+
+Code 06:
+
+A01.								B01.
+A02. int main()						B02. void f(int i)
+A03. {								B03. {
+A04. 	f(10);						B04. }
+A05. 	return 0;					B05.
+A06. }
+
+At line A04/B02
+				
+				int i=10;  // Parameter Initialization
+		   +--------------+
+		   |			  |
+     O	   |			+----+	i    int 			 O
+     |----10			| 10 |-----------------------|
+     /\					+----+						/\
+    main								    		f
+
+
+
+======++=============++===========++========++=============++==============++==========+
+
+Code 07:
+
+A01.								B01.
+A02. int main()						B02. void f(int i)
+A03. {								B03. {
+A04. 	int j=10;					B04. }
+A05.	f(j);						B05.
+A05. 	return 0;					
+A06. }
+
+At line A05/B02
+
+						int i=j;   //Parameter Initialization
+                      +---------+
+                      |         |
+					  |         v
+    o   int  j     +----+    +----+  i  int      o
+    |- ----------- | 10 |    | 10 | ----------- -|
+    /\  int* &j    +----+    +----+  &i int*    /\
+    main            100        96               f
+
+===========++=============++===========++=============++=============++==============++
+
+Code 08:
+
+A01.								B01.
+A02. int main()						B02. void f(int *pi)
+A03. {								B03. {
+A04. 	int j=10;					B04. }
+A05.	f(&j);						B05.
+A05. 	return 0;					
+A06. }
+
+At line A05/B02
+
+					      int *pi=&j;   //Parameter Initialization
+                          +---------+
+                          |         |
+					      |         v
+    o   int  j     +----+ |       +-----+  pi  int*    o
+    |- ------------| 10 | |       | 100 |------------ -|
+    /\  int* &j    +----+ |       +-----+  &pi int**  /\
+    main             100--+                           f
+
+==========++=============++===========++============++=============++==============++==========++
+
+Code 09:
+
+01.
+02. int main()
+03. {
+04.  int i=0;
+05.  int& ri=i;
+06.
+07.  return 0;
+08. }
+
+
+Code visualization
+
+Ater line 02
+
+     O
+     |-
+     /\
+     main
+	 
+After line 04
+
+		    Data      Name          Memory
+		    type	  Identifier	location
+     O	    int       i	       	     +---+
+     |-------------------------------| 0 |
+     /\						         +---+
+     main	int*	&i				  100 <---Memory address
+				   Expression
+
+After line 05
+
+		    Data       Name          Memory
+		    type	   Identifier	 location
+     O	    int        i	       	  +---+
+     |--------------------------------| 0 |
+     /\	--+					    +-----+---+
+     main |	int*	   &i		|	   100 <---Memory address
+		  |		   Expression	|		^
+		  |	   					|		|
+		  |						|		|	
+		  |	int&		ri		|		|
+		  +---------------------+		|
+			int*		&ri-------------+
+
+===========++=============++===========++===========++=============++==============++===
+Code 10:
+
+A01.								B01.
+A02. int main()						B02. void f(int &ri)
+A03. {								B03. {
+A04. 	int i=10;					B04. }
+A05.	f(i);						B05.
+A05. 	return 0;					
+A06. }
+
+At line A05/B02
+
+						int &r=i;   //Parameter Initialization
+                      +---------+
+                      |         |
+					  | 		V
+    o   int  i     +----+      ri  int&    o
+    |- ----------- | 10 |---------------- -|
+    /\  int* &i    +----+      &ri int*   /\
+    main            100                    f
+
+======++=============++===========++========++=============++==============++==========+
+
+	2 + 3
+	
+	
+	Input			output/Result
+	2---->   O
+			-|-------> 5
+	3---->  /\		 
+			+ operator
+			|
+Operand		| represents
+			|
+			V
+		addition Operation
+		
+		
+	Input					Output/Result
+		  +--------------+
+	2---->|  		     |
+		  |	I+ Operator  |------> 5
+	3---->|				 |
+		  +--------------+
+			    | 
+				|
+Operand			| represents
+				|
+				V
+			Addition Operation
+			
+======++=============++===========++========++=============++==============++==========
+
+	i = 10;
+			 +----+
+			i| 10 |
+			 +----+
+			    ^
+				|  side effect
+				| 
+	i---->		O
+		       -|  -------> i
+	   	       /\
+	10---->   = operator
+			  |
+			  |
+			  V
+		assignment operation
+		
+======++=============++===========++========++=============++==============++==========+
+
+							Memory
+							Memory
+							adress
+								+-------+
+							100	|		|
+								+-------+
+							101	|		|
+								+-------+
+							102	|		|
+								+-------+
+							103	|		|
+								+-------+
+							104	|		|
+								+-------+
+							105	|		|
+								+-------+
+								
+								
+======++=============++===========++========++=============++==============++==========+
+======++=============++===========++========++=============++==============++==========+
+
+Data Structure & Algorithms
+Date: 13 June 2023
+
+	o
+	
+	o----->o
+
+	o----->---->o
+	
+	o
+	|
+   ---
+    -
+	
+	o---->o
+		  |
+		 ---
+		  -
+		  
+	o-----o---->o
+				|
+			   ---
+				-
+				
+				
+Single linked list
+linked list
+chain
+
+	+-----+----+
+	|	  |    |
+	+-----+----+
+	
+	+-----+----+         +------+----+
+	|	  |  ----------->|      |    |
+	+-----+----+         +------+----+
+	
+	+-----+----+         +------+----+         +------+-----+
+	|	  |  ----------->|      |  ----------->|      |     |
+	+-----+----+         +------+----+         +------+-----+
+
+	+-----+----+
+	|	  |    |
+	+-----+--|-+
+			---
+			 -
+
+	+-----+----+         +------+----+
+	|	  |  ----------->|      |    |
+	+-----+----+         +------+--|-+			 
+								  ---
+								   -
+								   
+	+-----+----+         +------+----+         +------+-----+
+	|	  |  ----------->|      |  ----------->|      |     |
+	+-----+----+         +------+----+         +------+--|--+		
+														---
+														 -
+														 
+++======++=============++===========++========++=============++==============++=========												 
+
+														 
+	+-----+----+         +------+----+         +------+-----+
+	|	  |  ----------->|      |  ----------->|      |     |
+	+-----+----+         +------+----+         +------+-----+
+	   Node					Node				   Node
+   
+++======++=============++===========++========++=============++==============++==========
+	  
+Minimal example of "this"
+
+01. class X
+02. {
+03. public:
+04.	X();	
+05. };
+06. 
+07. X::X()
+08. {
+09. }
+10.
+11. int main(){
+12.	X x;   // x is an object on stack. it is a local object
+13.	return 0;
+14. }	
+
+
+
+============================================================================================
+Single Linked List
+														 
+	+-----+----+         +------+----+         +------+-----+
+	|10	  |  ----------->| 20   |  ----------->| 30   |     |
+	+-----+----+         +------+----+         +------+-----+
+	   Node					Node				   Node
+--------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+
+C++ - Functor - Function Object
+
+  O
+  |-
+  /\
+
+Developer
+
+class X                  class X
+
+{                        {
+public:                   public:
+  void operator() ()        void operator() ()
+  {                         {
+  }                         }
+};                       };
+
+
+int main()               int main()
+{                        {
+
+  X x;                    X x;
+  x();                    x.operator() ();
+  return 0;               return 0;
+}                        }
+
+                         O
+a.cpp       ------->    -|
+                        /\
+
+                      Compiler
+
+-----------------------------------------------------
+
+
+class X
+
+{
+public:
+
+  void operator() ()
+  {
+    cout << "X::operator() called" << endl;
+  }
+};
+
+ 
+This class X is called as functor (functor class) or we call it as
+
+function object.
+
+Now why do we call this as a function object.
+
+
+int main()
+
+{
+  X x;
+  x();   // This looks as if we are calling a function.
+
+         // Here x is an object, and it is behaving/acting like a function.
+
+         // Hence x is called as a function object
+  return 0;
+
+}
+
+ 
+
+Because an object is behaving like a function, it is called a function object.
+
+--------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+class X
+{
+public:
+  int operator() (int i)
+  {
+    cout << "X::operator() called : " << i << endl;
+    return 2 * i;
+  }
+};
+
+int main()
+{
+  X x;
+  int j;
+  j = x(10);
+  cout << j << endl;
+  return 0;
+
+}
+
+----------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+class X
+{
+public:
+  void operator() ()
+  {
+    cout << "X::operator() called" << endl;
+  }
+};
+
+void g( X & rx )
+{
+  rx();   // rx.operator()();
+}
+
+int main()
+{
+  X x;
+  g( x );
+  return 0;
+}
+
+-------------------------------------------------
+
+01
+02 class X
+03 {
+04  public:
+05    void operator() ()
+06    {
+07    }
+08 };
+09
+10 void g( X & rx )
+11 {
+12 }
+13
+14 int main()
+15 {
+16   X x;
+17
+18   g( x );
+19
+20   return 0;
+21 }
+22
+
+
+After line 15:
+
+       O
+       |-
+       /\
+      main
+
+After line 16:
+
+           Type  Name        Memory
+                 Identifier  Location
+
+       O     X     x         +-----+
+       |---------------------|     |
+       /\                    +-----+
+      main   X*    &x          100
+
+
+At line 18:
+ 
+            Type  Name        Memory    Name       Type
+                 Identifier  Location   Identifier
+
+       O     X     x         +-----+        rx      X &         O
+       |---------------------|     |-------------------------- -|
+       /\                    +-----+                           /\
+      main   X*    &x          100                             g
+
+----------------------------------------------------------------------------
+
+Functor = Function object
+operator() is overloaded in the class
+operator() is called as function call operator
+The operator() can take arguments and return values.
+Its a convinience feature.
+----------------------------------------------------------------------------
+
+In C++ 11, lambdas ---> Internally ---> Function object/functors are created.
+ 
+
+  O                          O
+  |-  ---- lambdas  ------> -|  -----> Generate the functor classes
+  /\                        /\         make a call i.e. invoke the operator().
+Developer                 Compiler
+
+
+--------------------------------------------------------------------------------
+
+Code #1
+#include <iostream>
+using namespace std;
+
+int f(int i)              ....  Assume you had 10 parameters      
+{
+  return 2 * i;
+}
+
+int main()
+{
+  cout << f(3) << endl;
+  return 0;
+}
+
+
+          int i = 3;
+
+         +---------+
+         |         |
+         |         V    i    O
+    O    |       | 3 |-------|
+    |- --+       +---+      /\
+    /\    3                  f
+    main
+   Caller                  Callee
+
+--------------------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+class X
+{
+public:
+   int i;
+public:
+   int f()
+   {
+     return 2 * i;                       // 2 * this->i ;
+   }
+
+};                                            +-------------+ +-----------+
+                                              |             | |           V
+int main()                        O      x    |   +-----+   | |       +-------+ this  O
+{                                 |-----------| i |  3  |   | |       | 100   |-------|
+  X x;                            /\          |   +-----+   | |       +-------+      /\
+                                main          |             | |                     X::f
+  x.i = 3;                                    +-------------+ |                   
+  cout << x.f() << endl;                &x         100 -------+                      2 * 3
+  return 0;                                      <-----------------------------------
+}                                                              6
+ 
+-------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+ 
+
+#include <iostream>
+using namespace std;
+
+class X
+{
+public:
+   int i;
+public:
+   int operator()()
+   {
+     return 2 * i;                       // 2 * this->i ;
+   }
+};                                            +-------------+ +-----------+
+                                              |             | |           V
+int main()                        O      x    |   +-----+   | |       +-------+ this  O
+{                                 |-----------| i |  3  |   | |       | 100   |-------|
+  X x;                            /\          |   +-----+   | |       +-------+      /\
+                                main          |             | |                     X::f
+  x.i = 3;                                    +-------------+ |                   
+  cout << x.operator()() << endl;       &x         100 -------+                      2 * 3
+  cout << x() << endl;
+  return 0;                                      <-----------------------------------
+}                                                              6
+
+ 

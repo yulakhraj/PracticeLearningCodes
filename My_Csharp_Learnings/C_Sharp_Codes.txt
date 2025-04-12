@@ -1,0 +1,1886 @@
+C sharp codes
+
+
+using System;
+namespace Csharp101
+{
+    internal class Program
+    {
+        public static void swap(ref int a, ref int b)
+        {
+            int t;
+            t = a;
+            a = b;
+            b = t;
+        }
+        static void Main(string[] args)
+        {
+            int a = 10;
+            int b = 20;
+            Console.WriteLine("\n a = {0} \t b ={1}", a, b);
+            swap(ref a, ref b);
+            Console.WriteLine("\n a = {0} \t b ={1}", a, b);
+        }
+    }
+}
+
+[03:54 pm] Deepak Mitra
+
+using System;
+namespace Csharp101
+{
+    internal class Program
+    {
+        public static void swap(out int a, out int b)
+        {
+            a = 10;
+            b = 20;
+        }
+        public static void swap2(out int a, int b) 			//combination of out and call by value
+        {
+            a = 1000;
+            b = 2000;
+        }
+        static void Main(string[] args)
+        {
+            int a = 100;
+            int b = 200;
+            Console.WriteLine("\n a = {0} \t b ={1}", a, b);
+            swap(out a,  out b);
+            Console.WriteLine("\n a = {0} \t b ={1}", a, b);
+            Console.WriteLine("\n a = {0} \t b ={1}", a, b);
+            swap2(out a, b);
+            Console.WriteLine("\n a = {0} \t b ={1}", a, b);
+        }
+    }
+}
+
+using System;
+namespace Csharp101
+
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int ? a = null; //nullable
+            int b = 200; //non nullable
+
+            Console.WriteLine("\n a = {0} \t b ={1}", a, b);
+
+            a = b; //nullable to non nullable
+
+ 
+
+            Console.WriteLine("\n a = {0} \t b ={1}", a, b);
+
+ 
+
+            int? c = 300; //assign values to nullables
+
+            a = c;
+
+            Console.WriteLine("\n a = {0} \t c ={1}", a, c);
+
+ 
+
+            int? d=100; //nullable
+
+            int e = 30; //non-nullable
+
+ 
+
+           // e = d; //error cannot convert a non nullable to nullable
+
+        }
+
+    }
+}
+
+namespace Csharp101
+
+{
+
+    internal class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            int ? a = null; //nullable
+
+            int b = 200; //non nullable
+
+            Console.WriteLine("\n a = {0} \t b ={1}", a, b);
+
+            a = b; //nullable to non nullable
+
+            Console.WriteLine("\n a = {0} \t b ={1}", a, b);
+
+            int? c = 300; //assign values to nullables
+            a = c;
+            Console.WriteLine("\n a = {0} \t c ={1}", a, c);
+
+            int ? d=100; //nullable
+
+            int e = 30; //non-nullable
+
+            // e = d; //error cannot convert a non nullable to nullable
+
+            int? f=100;
+
+            int? g=null;
+
+            int h;
+
+            h = f ?? 10;
+
+            Console.WriteLine("\n f = {0} \t h ={1}", f, h);
+
+            h = g ?? 10;
+
+            Console.WriteLine("\n f = {0} \t h ={1}", f, h);
+
+        }
+
+    }
+
+}
+
+
+[04:26 pm] Deepak Mitra
+
+using System;
+namespace Csharp101
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Arrays
+            //1-D array
+            int[] arr1 = { };
+            int[] arr2 = {1,2,3,4,5};
+            int[] arr3 = new int[] {1,2,3,4,5};
+            int[] arr4 = new int[5] { 1, 2, 3, 4, 5 };
+            int[] arr5 = arr4;
+
+            foreach (int i in arr1)
+
+            {
+
+                Console.Write("{0,5}", i);
+
+            }
+
+            Console.WriteLine();
+
+ 
+
+            foreach (int i in arr2)
+
+            {
+
+                Console.Write("{0,5}", i);
+
+            }
+
+            Console.WriteLine();
+
+ 
+
+            foreach (int i in arr3)
+
+            {
+
+                Console.Write("{0,5}", i);
+
+            }
+
+            Console.WriteLine();
+
+ 
+
+            foreach (int i in arr4)
+
+            {
+
+                Console.Write("{0,5}", i);
+
+            }
+
+            Console.WriteLine();
+
+ 
+
+            foreach (int i in arr5)
+
+            {
+
+                Console.Write("{0,5}", i);
+
+            }
+
+            Console.WriteLine();
+
+ 
+
+            Console.WriteLine(arr1.GetHashCode());
+
+            Console.WriteLine(arr2.GetHashCode());
+
+            Console.WriteLine(arr3.GetHashCode());
+
+            Console.WriteLine(arr4.GetHashCode());
+
+            Console.WriteLine(arr5.GetHashCode());
+
+ 
+
+            int sz;
+
+            Console.WriteLine("\n Enter the length of the array :");
+
+            sz=Int32.Parse(Console.ReadLine());
+
+            int[] arr6 = new int[sz];
+
+ 
+
+            for(int i=0; i<arr6.Length; i++)
+
+            {
+
+                Console.WriteLine("\n arr6[{0}]=", i);
+
+                arr6[i] = Int32.Parse(Console.ReadLine());
+
+            }
+
+            Console.WriteLine();
+
+ 
+
+            foreach (int i in arr6)
+
+            {
+
+                Console.Write("{0,5}", i);
+
+            }
+
+ 
+
+            int[] arr7 = new int[arr6.Length];
+
+ 
+
+        }
+
+    }
+
+}
+
+
+[04:26 pm] Deepak Mitra
+
+You need to do Multidimensional Array, jagged array in C#.net
+
+[04:31 pm] Deepak Mitra
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+
+ 
+
+namespace Csharp101
+
+{
+
+    internal class Program
+
+    {
+
+        public static void readarray(int[] arr)
+
+        {
+
+            Console.WriteLine(arr.GetHashCode());
+
+            for (int i=0; i<arr.Length; i++) 
+
+            {
+
+                Console.WriteLine("\n arr[{0}]: ", i);
+
+                arr[i]=Int32.Parse(Console.ReadLine());
+
+            }
+
+        }
+
+ 
+
+        public static void disparray(int[] arr)
+
+        {
+
+            Console.WriteLine(arr.GetHashCode());
+
+            for (int i = 0; i < arr.Length; i++)
+
+            {
+
+                Console.WriteLine("\n arr[{0}]: {1}", i, arr[i]);
+
+            }
+
+        }
+
+        static void Main(string[] args)
+
+        {
+
+            int[] arr = new int[5];
+
+            Console.WriteLine(arr.GetHashCode());
+
+            readarray(arr);
+
+            disparray(arr);
+
+        }
+
+    }
+
+}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+ 
+
+namespace Csharp101
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //2D array
+            int[,] arr =
+            {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+            };
+
+ 
+
+            int[][] arr2 =
+            {
+                new int[]{1,2,3},
+                new int[]{4,5},
+                new int[]{6}
+            };
+
+ 
+
+            for(int i=0; i < 3; ++i) 
+            { 
+                for(int j=0; j<3; ++j)
+                {
+                    Console.Write("{0,5}", arr[i,j]);
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
+ 
+
+            for (int i = 0; i < arr2.Length; ++i)
+            {
+                for (int j = 0; j < arr2[i].Length; ++j)
+                {
+                    Console.Write("{0,5}", arr2[i][j]);
+                }
+                Console.WriteLine();
+            }
+
+ 
+
+        }
+    }
+}
+
+using System; using System.Collections.Ge... by Deepak Mitra
+Deepak Mitra05:03 pm
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+ 
+
+namespace Csharp101
+{
+    internal class Program
+    {
+        public static void display(params int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write("{0,5}", arr[i]);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine();
+            display(1, 2, 3);
+            Console.WriteLine();
+            display(10, 20);
+            Console.WriteLine();
+            display(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+            Console.WriteLine();
+        }
+    }
+}
+
+using System; using System.Collections.Ge... by Deepak Mitra
+Deepak Mitra
+05:08 pm
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+ 
+
+namespace Csharp101
+{
+    internal class Program
+    {
+        public static void display(params int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write("{0,5}", arr[i]);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine();
+            display(1, 2, 3);
+            Console.WriteLine();
+            display(10, 20);
+            Console.WriteLine();
+            display(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+            Console.WriteLine();
+        }
+    }
+}
+
+using System; using System.Collections.Ge... by Deepak Mitra
+Deepak Mitra05:12 pm
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+ 
+
+namespace Csharp101
+{
+    internal class Program
+    {
+        enum city { Pune=100, Mumbai, Delhi=500, Kolkata, Patna};
+        static void Main(string[] args)
+        {
+            city c1 = city.Pune;
+            int val=(int)c1;
+            Console.WriteLine(c1); 
+            Console.WriteLine(val);
+
+ 
+
+            city c2 = city.Delhi;
+            int val2 = (int)c2;
+            Console.WriteLine(c2);
+            Console.WriteLine(val2);
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+ 
+
+namespace Csharp101
+{
+    class date
+    {
+        private int year;
+        private int month;
+        private int day;
+
+ 
+
+        public date(int year, int month, int day)
+        {
+            this.year = year;
+            this.month = month;
+            this.day = day;
+        }
+        public void displaydate()
+        {
+            Console.WriteLine("\n Year : " + year + "\t Month : " + month + "\t Day : " + day);
+        }
+    }
+
+ 
+
+    class info : date
+    {
+        private string name;
+
+        public info(string tname, int tyy, int tmm, int tdd):base(tyy, tmm, tdd)
+        {
+            this.name = tname;
+        }
+        public void show()
+        {
+            Console.WriteLine("\n Name : " + name);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            info ob = new info("abc", 2009, 12, 12);
+            ob.show();
+            ob.displaydate();
+        }
+    }
+}
+
+===================================================================================================
+Date- 27 june 2023
+namespace Csharp101
+{
+    class info
+    {
+        private static int x;
+        private int y;
+
+ 
+
+        public void setx(int tx) //non-static method
+        {
+            x = tx;
+            y = 2 * tx;
+        }
+
+ 
+
+        public static void setdata(int tx)
+        {
+            x = tx;
+            y = 2 * tx;
+        }
+
+ 
+
+        public int getx() //non-static method
+        {
+            return (x);
+        }
+
+ 
+
+        public static int getdata()
+        {
+            return (x);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            info.setdata(100);
+            Console.WriteLine("\n x : " + info.getdata());
+            info ob=new info();
+            ob.setx(200);
+            Console.WriteLine("\n x = " + ob.getx());
+
+
+        }
+    }
+}
+--------------------------------------------
+namespace Csharp101
+{
+    class info
+    {
+        private static int x;
+
+ 
+
+        public void setx(int tx) //non-static method
+        {
+            x = tx;
+        }
+
+ 
+
+        public static void setdata(int tx)
+        {
+            x = tx;
+        }
+
+ 
+
+        public int getx() //non-static method
+        {
+            return (x);
+        }
+
+ 
+
+        public static int getdata()
+        {
+            return (x);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            info.setdata(100);
+            Console.WriteLine("\n x : " + info.getdata());
+            info ob=new info();
+            ob.setx(200);
+            Console.WriteLine("\n x = " + ob.getx());
+
+ 
+
+
+            info ob2 = new info();
+            Console.WriteLine("\n x = " + ob2.getx());
+
+ 
+
+            ob2.setx(ob.getx()+100);
+            Console.WriteLine("\n x = " + ob.getx());
+            Console.WriteLine("\n x = " + ob2.getx());
+
+ 
+
+        }
+    }
+}
+----------------
+ static void printarray(int[] arr)
+    {
+      foreach (int item in arr)
+      {
+        Console.Write(item + " ");
+      }
+    }
+    static int sum(int a, int b){
+      return a + b;
+    }
+    
+    
+    static void Main(string[] args)
+    {
+      // Console.WriteLine("Hello World!");
+      // //int a=20,b=30;
+      // //Console.WriteLine("a={0} b={1}",a,b);
+      // int[] arr = { 12, 34, 21, 45, 55, 65, 75 };
+      // printarray(arr);
+
+      // Console.WriteLine("");
+      // Console.WriteLine("Largest array element: " + arr.Max());  // largest value
+      // Console.WriteLine("Smallest array element: " + arr.Min());  // smallest value
+      // Console.WriteLine("Summ of array elements: " + arr.Sum());  // sum of myNumbers
+      // Console.WriteLine(sum(2,4));
+
+    }
+  }
+------------------------------------------------------
+  namespace Csharp101
+{
+    abstract class demo
+    {
+        public abstract void show();
+        public void display()
+        {
+            Console.WriteLine("\n This is non abstract method");
+        }
+    }
+
+    class sample : demo
+    {
+        public override void show()
+        {
+            Console.WriteLine("\n This is show() from sample");
+        }
+    }
+
+    class sample2 : demo
+    {
+        public override void show()
+        {
+            Console.WriteLine("\n This is show() from sample2");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //dynamic polymorphism
+            demo ob;
+            ob=new sample();
+            ob.show();
+            ob.display();
+            ob=new sample2();
+            ob.show();
+            ob.display();
+        }
+    }
+}
+
+-----------------------
+namespace Csharp101
+{
+    abstract class demo
+    {
+        public abstract void show();
+        public void display()
+        {
+            Console.WriteLine("\n This is non abstract method");
+        }
+    }
+    class sample : demo
+    {
+        public override void show()
+        {
+            Console.WriteLine("\n This is show() from sample");
+        }
+        public new void display()
+        {
+            Console.WriteLine("\n This is non abstract method in class sample");
+        }
+    }
+    class sample2 : demo
+    {
+        public override void show()
+        {
+            Console.WriteLine("\n This is show() from sample2");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //dynamic polymorphism
+            demo ob;
+            ob=new sample();
+            ob.show();
+            ob.display(); 				//this will call- base class version of the non-abstract method
+
+            ob =new sample2();
+            ob.show();
+            ob.display(); 				//this will call- base class version of the non-abstract method
+
+            sample o=new sample();
+            o.show();
+            o.display(); 				//this will call derived versionof the non-abstract method
+
+        }
+    }
+}
+-------------------------------------------
+
+namespace Csharp101
+{
+    abstract class demo
+    {
+        public abstract void show();
+        public virtual void display()  //declare virtual for non-abstract method
+        {
+            Console.WriteLine("\n This is non abstract method");
+        }
+    }
+    class sample : demo
+    {
+        public override void show()
+        {
+            Console.WriteLine("\n This is show() from sample");
+        }
+        public override void display() //use override keyword to override inherited method
+        {
+            Console.WriteLine("\n This is non abstract method in class sample");
+        }
+    }
+    class sample2 : demo
+    {
+        public override void show()
+        {
+            Console.WriteLine("\n This is show() from sample2");
+        }
+        public override void display() //use override keyword to override inherited method
+        {
+            Console.WriteLine("\n This is non abstract method in class sample2");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //dynamic polymorphism
+
+ 
+
+            demo ob;
+            ob=new sample();
+            ob.show();
+            ob.display(); //this will call- base class version of the non-abstract method
+
+ 
+
+            ob =new sample2();
+            ob.show();
+            ob.display(); //this will call- base class version of the non-abstract method
+
+ 
+
+            sample o=new sample();
+            o.show();
+            o.display(); //this will call derived versionof the non-abstract method
+
+ 
+
+        }
+    }
+}
+--------------------
+date 30 june
+namespace Csharp101
+{
+    internal class Program
+    { 
+        //all three are mandatory
+        public static double func(float principal, float time, float roi)
+        {
+            return(principal * time * roi*0.01f);
+        }
+
+        //roi is optional all optional arguments are positioned right.
+        public static double func2(float principal, float time, float roi=5)
+        {
+            return (principal * time * roi * 0.01f);
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\n Result : {0:10}", func(5000, 5, 5));
+
+            Console.WriteLine("\n Result : {0:10}", func2(10000, 10.2f, 10));
+            Console.WriteLine("\n Result : {0:10}", func2(15000, 9.5f)); //roi will default take 5
+
+            //named arguments
+            Console.WriteLine("\n Result : {0:10}", func2(principal:15000, time:9.5f, roi:12.5f));
+            Console.WriteLine("\n Result : {0:10}", func2(time: 9.5f, principal: 15000, roi: 12.5f));
+            Console.WriteLine("\n Result : {0:10}", func2(roi: 12.5f, time: 9.5f, principal: 15000));
+        }
+    }
+}
+-----------------------------------------------------
+namespace Csharp101
+{
+    class sample
+    {
+        private int a;
+        private int b;
+        private static int cnt;
+        public sample() {
+            ++cnt;
+        } //default constructor
+        //parameterized comstructor
+        public sample(int a, int b)
+        {
+            ++cnt;
+            Console.WriteLine("\n Parametrerized Constructor called");
+            this.a = a; 
+            this.b = b;
+        }
+        //copy constructor
+        public sample(sample tob) 
+        {
+            ++cnt;
+            a= tob.a;
+            b= tob.b;
+            Console.WriteLine("\n Copy constructor called");
+        }
+        /*
+        public sample(sample tob) : this(tob.a, tob.b) { }
+        */
+        //static constructor will be called first before any object is created 
+        static sample()
+        {
+            cnt = 0;
+            Console.WriteLine("\n static constructor called");
+        }
+        public void display()
+        {
+            Console.WriteLine("\n {0} \t {1} \t {2}", a, b, cnt);
+        }
+    }
+    internal class Program
+    { 
+        public static void show(sample ob)
+        {
+            ob.display();
+        }
+        //all three are mandatory
+           static void Main(string[] args)
+        {
+            sample ob1 = new sample(10,20);
+            ob1.display();
+            sample ob2 = ob1; //copy constructor
+            ob2.display();
+            Console.WriteLine("\n {0} \t {1}", ob1.GetHashCode(), ob2.GetHashCode());   
+            show(ob1); //it will not call copy constructor
+            sample ob3 = new sample(100, 200);
+            ob3.display();
+        }
+    }
+}
+=-=========================================
+namespace Csharp101
+{
+    partial class sample
+    {
+        public void show()
+        {
+            Console.WriteLine("\n This is a show function");
+        }
+    }
+    partial class sample
+    {
+        public void display()
+        {
+            Console.WriteLine("\n This is a display function in second partial class");
+        }
+    }
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            sample ob = new sample();
+            ob.show();
+            ob.display();
+            myspace.sample ob2=new myspace.sample();
+            ob2.display2();
+        }
+
+    }
+}
+
+namespace myspace
+{
+    partial class sample
+    {
+        public void display2()
+        {
+            Console.WriteLine("\n This is a display2 function in myspace ");
+        }
+    }
+}
+------------------------------------------------
+namespace Csharp101
+{
+    class sample
+    {
+        private int a;
+        private int b;
+        private int[] c;
+
+        public sample(int ta, int tb, int sz)
+        {
+            this.a = ta;
+            this.b = tb;
+            c = new int[sz];
+            for(int i=0; i < sz; ++i)
+            {
+                c[i]= i+10;
+            }
+        }
+
+        public void opr()
+        {
+            //division by zero
+            int rem = a / b;
+            //type exception
+            Console.WriteLine("\n Enter an integer : ");
+            a=Convert.ToInt32(Console.ReadLine());
+            //array index out of bounds
+            Console.WriteLine("\n arr[length]:" + c[c.Length]);
+        }
+    }
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            sample ob = new sample(10, 2, 5);
+            try
+            {
+                ob.opr();
+            }
+            catch(System.ArithmeticException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (System.FormatException ex) 
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+            catch(System.IndexOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
+    }
+}
+namespace myspace
+{
+    partial class sample
+    {
+        public void display2()
+        {
+            Console.WriteLine("\n This is a display2 function in myspace ");
+        }
+    }
+}
+--------------------------------------------------------------------------------------------
+Date - 3 july
+
+namespace StringDemo
+
+{
+
+    class mylinkedlist<T>
+
+    {
+
+        private T info;
+
+        private mylinkedlist<T> next;
+
+        private int count;
+
+        private mylinkedlist<T> head = null;
+
+ 
+
+        public void Addnode(T tinfo)
+
+        {
+
+            mylinkedlist<T> newnode=new mylinkedlist<T>();
+
+            newnode.info = tinfo;
+
+            if (head == null)
+
+            {
+
+                head = newnode;
+
+                newnode.next = null;
+
+            }
+
+            else
+
+            {
+
+                mylinkedlist<T> temp = head;
+
+                while (temp.next != null)
+
+                {
+
+                    temp = temp.next;
+
+                }
+
+ 
+
+                newnode.next = temp.next;
+
+                temp.next = newnode;
+
+            }
+
+        }
+
+ 
+
+        public void traverse()
+
+        {
+
+            if(head==null)
+
+            {
+
+                Console.WriteLine("\n Linked List Empty ....");
+
+            }
+
+            else
+
+            {
+
+                mylinkedlist<T> temp = head;
+
+                while(temp!=null)
+
+                {
+
+                    Console.WriteLine (temp.info);
+
+                    temp = temp.next;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    internal class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            try
+
+            {
+
+                mylinkedlist<int> ill = new mylinkedlist<int>();
+
+                ill.Addnode(10);
+
+                ill.Addnode(20);
+
+                ill.Addnode(30);
+
+                ill.Addnode(40);
+
+                ill.Addnode(50);
+
+                ill.traverse();
+
+            }
+
+            catch (Exception e)
+
+            {
+
+                Console.WriteLine(e.ToString());
+
+                Console.WriteLine(e.StackTrace);
+
+            }
+
+        }
+
+    }
+
+}
+--------------------------------------------------------------
+
+namespace StringDemo
+{
+    public interface myinterface<T>
+    {
+        void show(T t);
+    }
+    class sample<T>:myinterface<T>
+    {
+        public void show(T t) 
+        { 
+            Console.WriteLine(t.ToString());
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                sample<int> ob = new sample<int>();
+                ob.show(100);
+                sample<string> ob2 = new sample<string>();
+                ob2.show("India");
+                sample<float> ob3 = new sample<float>();
+                ob3.show(100.45f);
+
+ 
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+}
+===========================================================================
+4 JULY 2023
+DELEGATES
+namespace StringDemo
+{
+    public delegate void show(string text);
+    internal class Program
+    {
+        public static void display(string text)
+        {
+            Console.WriteLine(text);
+        }
+        public static void opr(show t)
+        {
+            t("Coding in C#");
+        }
+        static void Main(string[] args)
+        {
+            show dobj = new show(Program.display);
+            dobj("C# Coding");
+            opr(dobj);
+        }
+    }
+}
+-----------------------------------------------------------
+namespace StringDemo
+{
+    public delegate int sum(int a, int b);
+    public delegate void show(sum t);
+    internal class Program
+    {
+        public static int add(int x, int y)
+        {
+            return(x+y);
+        }
+        public static void opr(sum t)
+        {
+            Console.WriteLine(t(10, 20));
+        }
+        static void Main(string[] args)
+        {
+            sum ob1 = new sum(add);
+            show dobj = new show(opr);
+            dobj(ob1);
+        }
+    }
+}
+---------------------------------------- 
+namespace StringDemo
+{
+    public delegate long delg(long a, long b);
+    internal class Program
+    {
+        public static long add(long x, long y)
+        {
+            return(x+y);
+        }
+        public static long mul(long x, long y)
+        {
+            return (x * y);
+        }
+        public static long rem(long x, long y)
+
+        {
+            return (x % y);
+        }
+        static void Main(string[] args)
+        {
+            delg ob1;
+
+            ob1 = new delg(add);
+
+            Console.WriteLine(ob1(10,2));
+
+            ob1 = new delg(mul);
+
+            Console.WriteLine(ob1(10, 2));
+
+            ob1 = new delg(rem);
+
+            Console.WriteLine(ob1(10, 2));
+        }
+    }
+}
+------------------------------------------------------------------
+namespace StringDemo
+{
+    public delegate long delg(long a, long b);
+    internal class Program
+    {
+        public static long add(long x, long y)
+        {
+            return(x+y);
+        }
+        public static long mul(long x, long y)
+        {
+            return (x * y);
+        }
+        public static long rem(long x, long y)
+        {
+            return (x % y);
+        }
+        static void Main(string[] args)
+        {
+            // Array of Delegates
+            delg[] ob1 ={
+            new delg(add),
+            new delg(mul),
+            new delg(rem)
+            };
+            for(int i=0; i<ob1.Length; i++)
+            {
+                Console.WriteLine(ob1[i](10, 2));
+            }
+        }
+    }
+}
+-----------------------------------------------------------
+Anonmoyous method
+
+namespace StringDemo
+{
+    public delegate void delg();
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            delg dl = delegate
+            {
+                Console.WriteLine("\n This is an Annonymous function");
+            };
+            dl();
+        }
+    }
+}
+---------------------------------------------------------------------
+namespace StringDemo
+{
+    public delegate int delg(int x, int y);
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            delg dl = delegate(int x, int y)
+            {
+                return(x+y);
+            };
+            Console.WriteLine(dl(10,20));
+        }
+    }
+}
+---------------------------------------------------------------------
+namespace StringDemo
+{
+    public delegate int delg(int x, int y);
+    internal class Program
+    {
+        public static int add(int x, int y)
+        {
+            return (x + y);
+        }
+        public static int sub(int x, int y)
+        {
+            return (x - y);
+        }
+        public static int mul(int x, int y)
+        {
+            return (x * y);
+        }
+        public static int rem(int x, int y)
+        {
+            return (x % y);
+        }
+        static void Main(string[] args)
+        {
+            //Multicast Delegate 
+            delg dl = new delg(add);
+            Console.WriteLine(dl(10, 2)); //add
+            dl += new delg(sub);
+            Console.WriteLine(dl(10, 2)); //sub
+            dl += new delg(mul);
+            Console.WriteLine(dl(10, 2)); //mul
+            dl += new delg(rem);         
+            Console.WriteLine(dl(10, 2)); //rem
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------
+namespace StringDemo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Action<string> func1 = (x) => Console.WriteLine(x);
+            func1("Lanbda Expression");
+            Action<int, int> func2 = (x,y) => Console.WriteLine(x+y);
+            func2(10,20);
+            Action<double, double> func3 = (x, y) =>
+            {
+                double p = (x + y);
+                Console.WriteLine(p);
+            };
+            func3(1.2, 3.4);
+            Func<double, double, double> func4 = (x, y) =>
+            {
+                double p = (x + y);
+                return (p);
+            };
+            Console.WriteLine("\n Product : " + func4(1.2, 3.4));
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------
+Date: 10 July 2023
+
+namespace ConsoleProj01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            var v1 = 10;
+
+            Console.WriteLine(v1.GetType().Name);
+            Console.WriteLine(v1);
+
+            var v2 = "C# Lanaguage";
+            Console.WriteLine(v2.GetType().Name);
+            Console.WriteLine(v2);
+
+            var v3 = new[] { 1, 2, 4, 5 }; //annonymoud array          
+            foreach (var v in v3)
+                Console.WriteLine(v);
+
+            int[] arr = { 10, 20, 30, 40, 50 };
+            var v4 = arr;
+            foreach (var v in v4)
+            {
+                Console.WriteLine(v);
+            }
+
+            var tup = new { name="abc", marks= 50}; //anninymous tuple
+            Console.WriteLine(tup.ToString());
+            Console.WriteLine(tup.GetType());
+            Console.WriteLine(tup.name + "\t" + tup.marks);
+            var lst=new List<string>();
+			
+            lst.Add("abc");
+            lst.Add("def");
+            lst.Add("ghi");
+            lst.Add("jkl");
+            lst.Add("mno");
+            Console.WriteLine(lst.ToString());
+            Console.WriteLine(lst.GetType());
+            foreach(var v in lst)
+                Console.WriteLine(v);
+        }
+    }
+}
+--------------------------------------------------------------------
+namespace ConsoleProj01
+{
+    class info
+    {
+        public int id { get; set; } //property
+        public string name { get; set; }
+        public string description { get; set; }
+    };
+
+    class demo
+    {
+        public long sqr;
+        public int num
+        {
+            get { return num; }
+            set {sqr = value * value;}
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           info ob=new info();
+
+            ob.id = 1;  //calling the setters or mutators
+            ob.name = "abc"; //calling the setters or mutators
+            ob.description = "Properties Demo"; //calling the setters or mutators
+
+            Console.WriteLine("\n Id : " + ob.id);
+            Console.WriteLine("\n Name : " + ob.name);
+            Console.WriteLine("\n Description : " + ob.description);
+
+            demo d=new demo();
+            d.num = 10;
+            Console.WriteLine(d.sqr);
+        }
+    }
+}
+-----------------------------------------------------------------
+namespace ConsoleProj01
+{
+    class info
+    {
+        public int id { get; set; } //property
+        public string name { get; set; }
+        public string description { get; set; }
+    }
+
+    class demo
+    {
+        public long sqr;
+        public int num
+        {
+            get { return num; }
+            set {sqr = value * value;}
+        }
+    }
+
+    class info2
+    {
+        private int id;
+        private string name;
+        private string description;
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public string Description
+        {
+            get { return description; }
+            set { description = value; }
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           info ob=new info();
+
+            ob.id = 1;  //calling the setters or mutators
+            ob.name = "abc"; //calling the setters or mutators
+            ob.description = "Properties Demo"; //calling the setters or mutators
+
+            Console.WriteLine("\n Id : " + ob.id);
+            Console.WriteLine("\n Name : " + ob.name);
+            Console.WriteLine("\n Description : " + ob.description);
+
+            demo d=new demo();
+            d.num = 10;
+            Console.WriteLine(d.sqr);
+
+            info2 ob2=new info2();
+            ob2.Id = 100;
+            ob2.Name = "Aniket";
+            ob2.Description = "Aniket is learning C# properties";
+
+            Console.WriteLine("\n Id : " + ob2.Id);
+            Console.WriteLine("\n Name : " + ob2.Name);
+            Console.WriteLine("\n Description : " + ob2.Description);
+        }
+    }
+}
+-----------------------------------------------------------------------
+namespace ConsoleProj01
+{
+    interface Ipropdemo
+    {
+        string Name { 
+            get;
+            set;
+        }
+        int Roll
+        {
+            get;
+            set;
+        }
+    }
+    class demo : Ipropdemo
+    {
+        private string _name;
+        private int _roll;
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+
+        public int Roll
+        {
+            get { return _roll; }
+            set { _roll = value; }
+        }
+    }
+    internal class Program
+    { 
+        static void Main(string[] args)
+        {
+            demo ob=new demo();
+            ob.Name = "abc";
+            ob.Roll = 100;
+            Console.WriteLine(ob.Name);
+            Console.WriteLine(ob.Roll);
+        }
+    }
+}
+--------------------------------------------------------------------------
+namespace ConsoleProj01
+{
+    abstract class shape
+    {
+        public abstract double area { get; }
+        public abstract double perimeter { get;}
+    }
+
+ 
+
+    class circle : shape
+    {
+        private double rad;
+
+ 
+
+        public double Rad
+        {
+            get { return rad; }
+            set { rad = value; }
+        }
+
+ 
+
+        public override double area 
+        {
+            get {
+                return (Math.PI * rad * rad);
+            }
+        }
+
+ 
+
+        public override double perimeter 
+        {
+            get {
+                return (2 * Math.PI * rad);
+            } 
+        }
+    }
+
+ 
+
+    class rectangle : shape
+    {
+        private double l;
+        private double b;
+
+ 
+
+        public double L
+        {
+            get { return l; }
+            set { l = value; }
+        }
+
+ 
+
+        public double B
+        {
+            get { return b; }
+            set { b = value; }
+        }
+
+ 
+
+        public override double area
+        {
+            get
+            {
+                return (l*b);
+            }
+        }
+
+ 
+
+        public override double perimeter
+        {
+            get
+            {
+                return (2 * (l+b));
+            }
+        }
+    }
+    internal class Program
+    {
+
+    static void Main(string[] args)
+        {
+            circle c=new circle();
+            c.Rad = 2.5;
+            Console.WriteLine("\n Area : " +  c.area);
+            Console.WriteLine("\n Perimeter : " + c.perimeter);
+
+ 
+
+            rectangle r=new rectangle();
+            r.L = 10;
+            r.B = 12;
+            Console.WriteLine("\n Area : " + r.area);
+            Console.WriteLine("\n Perimeter : " + r.perimeter);
+
+ 
+
+        }
+    }
+}
+-----------------------------------------------------------------------------
+81. Method Overlaoding
+using System;
+public class Sun{
+    public static void add(int a,int b){
+        Console.WriteLine(a+b);
+    }
+    public static void add(int a, int b, int c){
+       Console.WriteLine(a+b+c);
+    }
+    public static void add(float a,float b){
+        Console.WriteLine(a+b);
+    }
+    
+    public static void Main(string[] args){
+        Console.WriteLine("hello");
+        int a=20,b=10,c=40;
+        add(a,b);
+        Console.WriteLine("\n");
+        add(a,b,c);
+        Console.WriteLine("\n");
+        add(10.2f,20.5f);  
+    }
+}
+======================================================================
+2. Delegate
+using System;
+public class HelloWorld
+{
+    public delegate int square(int num);
+    public delegate void funct();
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Hello Mono World");
+        square sq = x =>(x*x);
+        int j = sq(5);
+        Console.WriteLine(j);
+        
+        funct d = delegate(){
+            Console.WriteLine("joker raja");
+        };
+        d();
+    }
+}
+==================================================================
+3. class setter and getter
+class employee
+    {
+        private string name;
+        private int age;
+        public string tname
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        public int tage
+        {
+            get { return age; }
+            set { age = value; }
+        }
+        public void display()
+        {
+            Console.WriteLine("Emplayee name is {0} and his Age is {1}", name, age);
+        }
+    }
+            employee e1 = new employee();
+            e1.tname = "manish";
+            e1.tage = 19;
+            e1.display();
+---------------------------------------------------------------------------------
+4. generics example
+class generics<T>
+    {
+        public generics(T msg) 
+        {
+            Console.WriteLine(msg);
+        }
+    }
+    class genericsMethod
+    {
+        public void show<T>(T msg)
+        {
+            Console.WriteLine(msg);
+        }
+    }
+
+generics<string> g1 = new generics<string>("World");
+generics<int> g2 = new generics<int>(50);
+genericsMethod g3 = new genericsMethod();
+g3.show("hello");
+g3.show(20);
+-----------------------------------------------------------------------------------------
+

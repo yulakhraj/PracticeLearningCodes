@@ -1,0 +1,56 @@
+Design Pattern
+-->A design pattern is a reusable solution to a common problem that occurs during software design. 
+-->It's like a blueprint or template that developers can use to solve a specific design problem.
+-->Design patterns help to improve the quality of software by providing a common language and framework for 
+	developers to communicate and discuss software design concepts.
+
+								Design Patterns
+										|
+   	+-------------------------------------------------------+-------------------------------------------------------+
+	|							|				                        |
+	Creational					     	Structural						Behavioral 
+	|							|				                 	|
+	+--> deal with Object				        +--> deal with composition				+--> deal with interactions
+	     creation						     and relationships				             and communication
+	 
+
+
+
+#DESIGN PATTERENS
+Topics
+1. What is a design pattern.
+2. What are benefits of design pattern.
+3. Demerits of design pattern.
+4. Category of design pattern
+	a. creational design pattern
+	b. structural design pattern
+	c. behavirioul design pattern
+	
+Creation design method	
+a.	factory method-
+b.	abstract factory-
+c.	builder-
+d.	prototype-
+e.	singleton-
+	
+Structural pattern
+a. adapter-
+b. bridge
+c. composite
+d. decorator-
+e. facede-
+f. Fliweight
+g. proxy
+
+Behavioural pattern
+a. chain of responsibility
+b. commands
+c. iterators-
+d. mediator
+e. momento
+f. observer
+g. state-
+h. strategy
+
+Template method-
+a. finally visitor

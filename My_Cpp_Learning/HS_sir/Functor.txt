@@ -1,0 +1,280 @@
+C++ - Functor - Function Object
+
+  O
+  |-
+  /\
+
+Developer
+
+class X                  class X
+
+{                        {
+public:                   public:
+  void operator() ()        void operator() ()
+  {                         {
+  }                         }
+};                       };
+
+
+int main()               int main()
+{                        {
+
+  X x;                    X x;
+  x();                    x.operator() ();
+  return 0;               return 0;
+}                        }
+
+                         O
+a.cpp       ------->    -|
+                        /\
+
+                      Compiler
+
+-----------------------------------------------------
+
+
+class X
+
+{
+public:
+
+  void operator() ()
+  {
+    cout << "X::operator() called" << endl;
+  }
+};
+
+ 
+This class X is called as functor (functor class) or we call it as
+
+function object.
+
+Now why do we call this as a function object.
+
+
+int main()
+
+{
+  X x;
+  x();   // This looks as if we are calling a function.
+
+         // Here x is an object, and it is behaving/acting like a function.
+
+         // Hence x is called as a function object
+  return 0;
+
+}
+
+ 
+
+Because an object is behaving like a function, it is called a function object.
+
+--------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+class X
+{
+public:
+  int operator() (int i)
+  {
+    cout << "X::operator() called : " << i << endl;
+    return 2 * i;
+  }
+};
+
+int main()
+{
+  X x;
+  int j;
+  j = x(10);
+  cout << j << endl;
+  return 0;
+
+}
+
+----------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+class X
+{
+public:
+  void operator() ()
+  {
+    cout << "X::operator() called" << endl;
+  }
+};
+
+void g( X & rx )
+{
+  rx();   // rx.operator()();
+}
+
+int main()
+{
+  X x;
+  g( x );
+  return 0;
+}
+
+-------------------------------------------------
+
+01
+02 class X
+03 {
+04  public:
+05    void operator() ()
+06    {
+07    }
+08 };
+09
+10 void g( X & rx )
+11 {
+12 }
+13
+14 int main()
+15 {
+16   X x;
+17
+18   g( x );
+19
+20   return 0;
+21 }
+22
+
+
+After line 15:
+
+       O
+       |-
+       /\
+      main
+
+After line 16:
+
+           Type  Name        Memory
+                 Identifier  Location
+
+       O     X     x         +-----+
+       |---------------------|     |
+       /\                    +-----+
+      main   X*    &x          100
+
+
+At line 18:
+ 
+            Type  Name        Memory    Name       Type
+                 Identifier  Location   Identifier
+
+       O     X     x         +-----+        rx      X &         O
+       |---------------------|     |-------------------------- -|
+       /\                    +-----+                           /\
+      main   X*    &x          100                             g
+
+----------------------------------------------------------------------------
+
+Functor = Function object
+operator() is overloaded in the class
+operator() is called as function call operator
+The operator() can take arguments and return values.
+Its a convinience feature.
+----------------------------------------------------------------------------
+
+In C++ 11, lambdas ---> Internally ---> Function object/functors are created.
+ 
+
+  O                          O
+  |-  ---- lambdas  ------> -|  -----> Generate the functor classes
+  /\                        /\         make a call i.e. invoke the operator().
+Developer                 Compiler
+
+
+--------------------------------------------------------------------------------
+
+Code #1
+#include <iostream>
+using namespace std;
+
+int f(int i)              ....  Assume you had 10 parameters      
+{
+  return 2 * i;
+}
+
+int main()
+{
+  cout << f(3) << endl;
+  return 0;
+}
+
+
+          int i = 3;
+
+         +---------+
+         |         |
+         |         V    i    O
+    O    |       | 3 |-------|
+    |- --+       +---+      /\
+    /\    3                  f
+    main
+   Caller                  Callee
+
+--------------------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+class X
+{
+public:
+   int i;
+public:
+   int f()
+   {
+     return 2 * i;                       // 2 * this->i ;
+   }
+
+};                                            +-------------+ +-----------+
+                                              |             | |           V
+int main()                        O      x    |   +-----+   | |       +-------+ this  O
+{                                 |-----------| i |  3  |   | |       | 100   |-------|
+  X x;                            /\          |   +-----+   | |       +-------+      /\
+                                main          |             | |                     X::f
+  x.i = 3;                                    +-------------+ |                   
+  cout << x.f() << endl;                &x         100 -------+                      2 * 3
+  return 0;                                      <-----------------------------------
+}                                                              6
+ 
+-------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+ 
+
+#include <iostream>
+using namespace std;
+
+class X
+{
+public:
+   int i;
+public:
+   int operator()()
+   {
+     return 2 * i;                       // 2 * this->i ;
+   }
+};                                            +-------------+ +-----------+
+                                              |             | |           V
+int main()                        O      x    |   +-----+   | |       +-------+ this  O
+{                                 |-----------| i |  3  |   | |       | 100   |-------|
+  X x;                            /\          |   +-----+   | |       +-------+      /\
+                                main          |             | |                     X::f
+  x.i = 3;                                    +-------------+ |                   
+  cout << x.operator()() << endl;       &x         100 -------+                      2 * 3
+  cout << x() << endl;
+  return 0;                                      <-----------------------------------
+}                                                              6
+
+ 
+-------------------------------------------------------------------------------------

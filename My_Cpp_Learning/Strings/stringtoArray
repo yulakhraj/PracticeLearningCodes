@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+
+    return 0;
+}
+
+
+/*
+ int lengthOfLastWord(string s) {
+        stringstream ss(s);
+        string word;
+        vector<string> words;
+        while(ss>>word){
+            words.push_back(word);
+        }
+        int last = words.size();
+        string ab = words[last-1];
+        return ab.size();
+    }
+*/
